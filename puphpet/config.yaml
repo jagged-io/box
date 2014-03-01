@@ -81,7 +81,7 @@ nginx:
             server_name: jagged-ui.dev
             server_aliases:
                 - www.jagged-ui.dev
-            www_root: /var/www/jagged-ui/app
+            www_root: /var/www/Jagged-UI/app
             listen_port: '80'
             index_files:
                 - index.php

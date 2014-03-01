@@ -960,10 +960,22 @@ class mine {
   }
 
   exec { "bounce":
-      command => "/etc/init.d/nginx restart && /etc/init.d/php5-fpm restart",
+    command => "/etc/init.d/nginx restart && /etc/init.d/php5-fpm restart",
     returns => [ 0, 1, 2, 255],
   }
 
+  exec { "node_stuff":
+    command => "sh /vagrant/puphpet/files/custom/npm.sh",
+    path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
+    returns => [ 0, 1, 2, 255],
+  }
+
+  exec { "install_jagged":
+    cwd => "/vagrant/",
+    command => "git clone https://github.com/jagged-io/Jagged-UI.git",
+    path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
+    returns => [ 0, 1, 2, 255],
+  }
 }
 
 class{ 'mine': stage => mine }
