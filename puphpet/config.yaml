@@ -7,7 +7,7 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.189
             forwarded_port:
-                zYVZ6JfOzja4:
+                JgmWO6pQG9O5:
                     host: '6874'
                     guest: '22'
         provider:
@@ -26,7 +26,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            qrbPoR7EnVqa:
+            1icPEyWFHZFe:
                 id: vagrant-root
                 source: ./
                 target: /var/www
@@ -66,7 +66,7 @@ mailcatcher:
 nginx:
     install: '1'
     vhosts:
-        T4r5JPkjUAm4:
+        PTlhE4q4BW5W:
             server_name: jagged.dev
             server_aliases:
                 - www.jagged.dev
@@ -77,7 +77,7 @@ nginx:
                 - index.html
             envvars:
                 - 'APP_ENV dev'
-        S5r6JPkjUAn4:
+        oXuAle6Xk8DE:
             server_name: jagged-ui.dev
             server_aliases:
                 - www.jagged-ui.dev
@@ -90,7 +90,7 @@ nginx:
                 - 'APP_ENV dev'
 php:
     install: '1'
-    version: '54'
+    version: '55'
     composer: '1'
     modules:
         php:
@@ -121,12 +121,12 @@ drush:
     settings:
         drush.tag_branch: 6.x
 mysql:
-    install: 1
-    root_password: 'root'
+    install: '1'
+    root_password: root
     phpmyadmin: 0
     adminer: 0
     databases:
-        VJXntWPSmACY:
+        2LY9xVj9jXIz:
             grant:
                 - ALL
             name: jagged

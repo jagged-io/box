@@ -20,7 +20,7 @@ group { 'puppet':   ensure => present }
 group { 'www-data': ensure => present }
 
 user { $::ssh_username:
-  shell  => '/bin/bash',
+  shell  => '/bin/zsh',
   home   => "/home/${::ssh_username}",
   ensure => present
 }
@@ -949,6 +949,7 @@ if hash_key_equals($rabbitmq_values, 'install', 1) {
   }
 }
 
+
 ###### CUSTOM
 
 class mine {
@@ -960,7 +961,7 @@ class mine {
 
   exec { "bounce":
       command => "/etc/init.d/nginx restart && /etc/init.d/php5-fpm restart",
-	  returns => [ 0, 1, 2, 255],
+    returns => [ 0, 1, 2, 255],
   }
 
 }
