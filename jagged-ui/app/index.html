@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jagged UI :: an AngularJS module for UI Awesomeness.</title>
+
+		<link href="css/thirdparty.min.css" rel="stylesheet">
+		<link href="css/jagged.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body ng-app="JaggedUI">
+
+		<header>
+			<a class="jaggedTitle">
+				<img src="img/jaggedUI.Logo.v0.2-solid.png" height="32">
+				Jagged<span>UI</span>
+			</a>
+			<p>an AngularJS module for UI Awesomeness.</p>
+			<a class="forkOnGitHub pull-right" href="https://github.com/justinwoodcock/Jagged-UI" target="_blank">
+				<i class="fa fa-github"></i>
+				Fork it on github
+			</a>
+		</header>
+
+		<nav jagged-nav ng-controller="JaggedNavController" data-items="json/nav-items.json"></nav>
+
+		<div class="mainView">
+			<img class="logo" src="img/jaggedUI.Logo.v0.2.png">
+			<h1>Jagged<span>UI</span></h1>
+			<p>an AngularJS module for Awesome UI</p>
+		</div>
+
+		<script src="js/jagged.min.js"></script>
+
+	</body>
+
+</html>
