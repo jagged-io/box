@@ -74,6 +74,18 @@ nginx:
             listen_port: '80'
             index_files:
                 - index.php
+                - index.html
+            envvars:
+                - 'APP_ENV dev'
+        S5r6JPkjUAn4:
+            server_name: jagged-ui.dev
+            server_aliases:
+                - www.jagged-ui.dev
+            www_root: /var/www/jagged-ui/app
+            listen_port: '80'
+            index_files:
+                - index.php
+                - index.html
             envvars:
                 - 'APP_ENV dev'
 php:
@@ -94,7 +106,7 @@ php:
         display_errors: On
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
-    timezone: America/Chicago
+    timezone: America/Los_Angeles
 xdebug:
     install: 0
     settings:
